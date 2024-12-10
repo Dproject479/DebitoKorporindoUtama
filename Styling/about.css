@@ -1,0 +1,841 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  padding-top: 130px;
+}
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.fade-in-word {
+display: inline-block;
+transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+ /* Custom Style */
+ .top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1031; /* Higher than the navbar */
+  background-color: #29ab87 !important;
+  color: #fff;
+  font-size: 14px;
+}
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0d6efd; /* Change to primary color on hover */
+}
+
+/* Brand logo in the navbar */
+.navbar .navbar-brand img {
+height:110px; /* Tentukan tinggi logo yang diinginkan */
+width: 110px; /* Mempertahankan rasio aspek logo */
+vertical-align: middle; /* Memastikan logo terpusat secara vertikal */
+margin-left: 100px;
+
+}
+
+/* Navbar background styles */
+.navbar {
+background-color: rgba(0, 255, 255, 0.5); /* Slightly opaque white background */
+border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Light border for definition */
+padding-top: 50px;
+}
+
+/* Navbar nav styles */
+.navbar .navbar-nav {
+background-color: black; /* Slightly opaque background for nav items */
+border-radius: 5px; /* Rounded corners for the background */
+padding: 10px; /* Padding around nav items for better spacing */
+}
+
+/* Navbar link styles */
+.navbar .navbar-nav .nav-link {
+margin-left: 25px;
+padding: 10px 0;
+color: #696E77;
+font-weight: 500;
+outline: none;
+}
+
+/* Centering menu items vertically */
+.navbar .navbar-nav .nav-item {
+display: flex; /* Use flexbox for alignment */
+align-items: center; /* Center items vertically */
+}
+
+/* Adjust margins for mobile view */
+@media (max-width: 767.98px) {
+.navbar .navbar-nav .nav-link {
+    margin-left: 10px; /* Decrease margin on smaller screens */
+    padding: 8px 0;    /* Adjust padding for better fit */
+}
+}
+
+/* Hover and active states for nav links */
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+color: var(--primary);
+}
+
+/* Dropdown toggle styles */
+.navbar .dropdown-toggle::after {
+border: none;
+content: "\f107"; /* Font Awesome icon */
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+vertical-align: middle;
+margin-left: 8px;
+}
+
+/* Button styles */
+.navbar .btn {
+background-color: #29ab87; /* Change button color to aqua */
+color: white; /* Button text color */
+border: none; /* Remove border */
+border-radius: 10px;
+transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for smooth hover effect */
+margin-left: 0 ; /* Reset margin to position the button more to the left */
+}
+
+/* Button hover effect */
+.navbar .btn:hover {
+background-color: #00bcd4; /* Darker aqua color on hover */
+transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Responsive styles for screens smaller than 992px */
+@media (max-width: 991.98px) {
+.navbar .navbar-brand img {
+    max-height: 200px;
+    margin: auto;
+}
+
+.navbar .navbar-nav {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    display: flex;         /* Use flexbox for better alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    width: 100%;           /* Full width for navbar */
+}
+
+.navbar .nav-item {
+    margin-left: 0;      /* Remove left margin in mobile view */
+    width: 100%;         /* Make nav items full width */
+    text-align: center;  /* Center text in nav items */
+}
+
+.navbar .nav-item .dropdown-menu {
+    padding-left: 30px;
+    width: auto;          /* Auto width for dropdown */
+    position: static;     /* Adjust position for better visibility */
+}
+}
+
+/* Dropdown menu styles for screens larger than 992px */
+@media (min-width: 992px) {
+  /* Gaya dasar untuk section */
+section {
+  padding: 50px 20px;
+}
+
+.navbar .nav-item .dropdown-menu {
+    display: block;
+    border: none;
+    margin-top: 0;
+    top: 150%;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    top: 100%;
+    visibility: visible;
+    transition: .5s;
+    opacity: 1;
+}
+}
+.header-container {
+  position: relative;
+  background-color: #29ab87;
+  background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
+  color: white;
+  padding: 100px 0;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.sub-header {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 50px 20px;
+  }
+
+  .sub-header {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .display-3 {
+    font-size: 2rem;
+  }
+
+  .sub-header {
+    font-size: 0.9rem;
+  }
+}
+/* Section container */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Kartu dasar */
+.info-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Kartu Visi */
+.info-card-visi {
+  background: url("https://img.freepik.com/free-photo/man-looking-through-glass-business-vision-blockchain-technology-digital-remix_53876-124707.jpg?ga=GA1.1.1688831168.1709805576&semt=ais_hybrid") no-repeat center center / cover;
+}
+
+/* Kartu Misi */
+.info-card-misi {
+  background: url("https://img.freepik.com/free-photo/high-angle-dart-bull-s-eye_23-2148443750.jpg?ga=GA1.1.1688831168.1709805576&semt=ais_hybrid") no-repeat center center / cover;
+}
+
+/* Overlay untuk kedua kartu */
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ background-color: #29ab87 !important;
+ opacity: 0.5  ;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+/* Konten */
+.info-content {
+  z-index: 2;
+  max-width: 80%;
+}
+
+.info-header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Logo */
+.info-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+  object-fit: contain;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .info-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .info-logo {
+    top: auto;
+    right: auto;
+    bottom: 20px;
+    left: 20px;
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .info-header {
+    font-size: 1.5rem;
+  }
+
+  .info-text {
+    font-size: 0.9rem;
+  }
+
+  .info-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.left-section, .right-section {
+  height: 100vh;
+  color: white;
+  position: relative;
+  background-size: cover;
+  background-position: left ;
+}
+
+.left-section {
+  background-image: url("https://img.freepik.com/free-photo/female-hand-raising-trophy_23-2148355528.jpg?ga=GA1.1.1688831168.1709805576&semt=ais_hybrid");
+}
+
+.right-section {
+  background-image: url("https://img.freepik.com/free-photo/young-women-holding-sports-cup_23-2149044696.jpg?ga=GA1.1.1688831168.1709805576&semt=ais_hybrid");
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #29ab87;
+  opacity: 0.7; /* Ubah opacity sesuai kebutuhan */
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.icon-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+header {
+  background-color: #f8f9fa;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* General styles for the container-fluid */
+.container-fluid {
+  position: relative;
+  background: rgba(0, 255, 255, 0.2); /* Aqua overlay */
+  overflow: hidden;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.facts-text .btn-secondary {
+  margin-top: 20px; /* Jarak tombol ke elemen di atasnya */
+  margin-bottom: 20px; /* Tambahkan jarak di bawah tombol */
+}
+
+/* Background image styling for container-fluid */
+.container-fluid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://img.freepik.com/free-photo/office-alternative-energy-sources_23-2149311434.jpg?ga=GA1.1.1688831168.1709805576&semt=ais_hybrid') no-repeat center center;
+  background-size: cover;
+  background-color: aqua;
+  opacity: 0.1; /* Low opacity for the background image */
+  z-index: 1;
+}
+
+/* Ensure content appears above the background */
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive text and spacing */
+.facts-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.facts-text p {
+  font-size: 1rem;
+}
+
+.btn-secondary {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+}
+
+/* Counter section */
+.facts-counter h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+}
+
+.facts-counter p {
+  font-size: 1.25rem;
+  color: black;
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .facts-text h1 {
+    font-size: 2rem;
+  }
+
+  .facts-counter h1 {
+    font-size: 2.5rem;
+  }
+}
+/* General button styling */
+.btn-secondary {
+  background-color: #0066cc; /* Warna biru yang menarik */
+  color: #ffffff; /* Warna teks putih */
+  border: none;
+  border-radius: 8px; /* Sudut tombol melengkung */
+  padding: 12px 24px; /* Padding tombol */
+  font-size: 1rem; /* Ukuran teks */
+  font-weight: bold; /* Teks lebih tegas */
+  text-transform: uppercase; /* Teks kapital */
+  letter-spacing: 1px; /* Jarak antar huruf */
+  transition: all 0.3s ease; /* Animasi saat hover */
+  display: inline-block;
+}
+
+/* Button hover effects */
+.btn-secondary:hover {
+  background-color: #004da8; /* Warna biru lebih gelap */
+  color: #f0f0f0; /* Warna teks sedikit lebih terang */
+  transform: translateY(-3px); /* Efek sedikit terangkat */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
+}
+
+/* Button active effects (ketika ditekan) */
+.btn-secondary:active {
+  background-color: #003c86; /* Warna biru lebih gelap lagi */
+  transform: translateY(0); /* Kembali ke posisi semula */
+  box-shadow: none; /* Bayangan dihilangkan */
+}
+
+/* Button responsiveness */
+@media (max-width: 768px) {
+  .btn-secondary {
+    font-size: 0.9rem; /* Ukuran teks lebih kecil di layar kecil */
+    padding: 10px 20px; /* Padding lebih kecil */
+  }
+}
+
+.content-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.image-container img {
+  width: 100%;
+  border-radius: 8px;
+}
+.sub-header-dt {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #007BFF;
+  border-left: 4px solid #007BFF;
+  padding-left: 10px;
+}
+.description {
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.custom-container {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.office-header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #007BFF;
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 4px solid #007BFF;
+  padding-bottom: 10px;
+}
+
+.office-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-timeline:before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 100%;
+  background: #c6c6c6;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.main-timeline .timeline {
+  margin-bottom: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-timeline .icon {
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.main-timeline .icon:before,
+.main-timeline .icon:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.33s ease-out 0s;
+}
+
+.main-timeline .icon:before {
+  background: #fff;
+  border: 2px solid #232323;
+  left: -3px;
+}
+
+.main-timeline .icon:after {
+  border: 2px solid #c6c6c6;
+  left: 3px;
+}
+
+.main-timeline .timeline:hover .icon:before {
+  left: 3px;
+}
+
+.main-timeline .timeline:hover .icon:after {
+  left: -3px;
+}
+
+.main-timeline .date-content {
+  flex: 1;
+  margin-top: 22px;
+  position: relative;
+  text-align: center;
+}
+
+.main-timeline .date-content:before {
+  content: "";
+  width: 36.5%;
+  height: 2px;
+  background: #c6c6c6;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.main-timeline .date-outer {
+  width: 125px;
+  height: 125px;
+  font-size: 16px;
+  text-align: center;
+  margin: auto;
+  position: relative;
+}
+
+.main-timeline .date-outer:before,
+.main-timeline .date-outer:after {
+  content: "";
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.33s ease-out 0s;
+}
+
+.main-timeline .date-outer:before {
+  background: #fff;
+  border: 2px solid #232323;
+  left: -6px;
+}
+
+.main-timeline .date-outer:after {
+  border: 2px solid #c6c6c6;
+  left: 6px;
+}
+
+.main-timeline .timeline:hover .date-outer:before {
+  left: 6px;
+}
+
+.main-timeline .timeline:hover .date-outer:after {
+  left: -6px;
+}
+
+.main-timeline .date {
+  width: 100%;
+  position: absolute;
+  top: 27%;
+  left: 0;
+}
+
+.main-timeline .month {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main-timeline .year {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  color: #232323;
+  line-height: 36px;
+}
+
+.main-timeline .timeline-content {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.main-timeline .title {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0 0 15px 0;
+}
+
+.main-timeline .description {
+  margin-bottom: 0;
+}
+
+.main-timeline .timeline:nth-child(even) .date-content {
+  order: 2;
+}
+
+.main-timeline .timeline:nth-child(even) .date-content:before {
+  right: auto;
+  left: 10px;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-content {
+  text-align: right;
+}
+
+@media only screen and (max-width: 991px) {
+  .main-timeline .date-content {
+    margin-top: 35px;
+  }
+  .main-timeline .timeline-content {
+    padding: 10px 0;
+  }
+  .main-timeline .title {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .main-timeline:before {
+    margin: 0;
+    left: 7px;
+  }
+  .main-timeline .timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-timeline .date-content {
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+  }
+  .main-timeline .timeline-content {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+.certificate-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.certificate-wrapper:hover img {
+  transform: scale(1.05); /* Zoom-in effect on hover */
+}
+
+.glossy-effect {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+  transform: rotate(15deg);
+  animation: glossy-animation 3s infinite;
+}
+
+@keyframes glossy-animation {
+  0% {
+    top: -100%;
+  }
+
+  50% {
+    top: 50%;
+  }
+
+  100% {
+    top: 200%;
+  }
+}
+
+.mtt-team-section {
+  background-image: url(https://img.freepik.com/free-photo/abstract-blue-geometric-shapes-background_24972-1841.jpg?ga=GA1.1.1688831168.1709805576&semt=ais_hybrid);
+  background-size: cover;
+}
+
+.mtt-card {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-radius: 20px;
+}
+
+.mtt-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.mtt-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.mtt-card:hover .mtt-card-body {
+  transform: translateY(0);
+}
+
+.mtt-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+

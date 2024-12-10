@@ -1,0 +1,323 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  padding-top: 130px;
+}
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.fade-in-word {
+display: inline-block;
+transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+ /* Custom Style */
+ .top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1031; /* Higher than the navbar */
+  background-color: #29ab87 !important;
+  color: #fff;
+  font-size: 14px;
+}
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0d6efd; /* Change to primary color on hover */
+}
+
+/* Brand logo in the navbar */
+.navbar .navbar-brand img {
+height:110px; /* Tentukan tinggi logo yang diinginkan */
+width: 110px; /* Mempertahankan rasio aspek logo */
+vertical-align: middle; /* Memastikan logo terpusat secara vertikal */
+margin-left: 100px;
+
+}
+
+/* Navbar background styles */
+.navbar {
+background-color: rgba(0, 255, 255, 0.5); /* Slightly opaque white background */
+border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Light border for definition */
+padding-top: 50px;
+}
+
+/* Navbar nav styles */
+.navbar .navbar-nav {
+background-color: black; /* Slightly opaque background for nav items */
+border-radius: 5px; /* Rounded corners for the background */
+padding: 10px; /* Padding around nav items for better spacing */
+}
+
+/* Navbar link styles */
+.navbar .navbar-nav .nav-link {
+margin-left: 25px;
+padding: 10px 0;
+color: #696E77;
+font-weight: 500;
+outline: none;
+}
+
+/* Centering menu items vertically */
+.navbar .navbar-nav .nav-item {
+display: flex; /* Use flexbox for alignment */
+align-items: center; /* Center items vertically */
+}
+
+/* Adjust margins for mobile view */
+@media (max-width: 767.98px) {
+.navbar .navbar-nav .nav-link {
+    margin-left: 10px; /* Decrease margin on smaller screens */
+    padding: 8px 0;    /* Adjust padding for better fit */
+}
+}
+
+/* Hover and active states for nav links */
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+color: var(--primary);
+}
+
+/* Dropdown toggle styles */
+.navbar .dropdown-toggle::after {
+border: none;
+content: "\f107"; /* Font Awesome icon */
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+vertical-align: middle;
+margin-left: 8px;
+}
+
+/* Button styles */
+.navbar .btn {
+background-color: #29ab87; /* Change button color to aqua */
+color: white; /* Button text color */
+border: none; /* Remove border */
+border-radius: 10px;
+transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for smooth hover effect */
+margin-left: 0 ; /* Reset margin to position the button more to the left */
+}
+
+/* Button hover effect */
+.navbar .btn:hover {
+background-color: #00bcd4; /* Darker aqua color on hover */
+transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Responsive styles for screens smaller than 992px */
+@media (max-width: 991.98px) {
+.navbar .navbar-brand img {
+    max-height: 200px;
+    margin: auto;
+}
+
+.navbar .navbar-nav {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    display: flex;         /* Use flexbox for better alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    width: 100%;           /* Full width for navbar */
+}
+
+.navbar .nav-item {
+    margin-left: 0;      /* Remove left margin in mobile view */
+    width: 100%;         /* Make nav items full width */
+    text-align: center;  /* Center text in nav items */
+}
+
+.navbar .nav-item .dropdown-menu {
+    padding-left: 30px;
+    width: auto;          /* Auto width for dropdown */
+    position: static;     /* Adjust position for better visibility */
+}
+}
+
+/* Dropdown menu styles for screens larger than 992px */
+@media (min-width: 992px) {
+  /* Gaya dasar untuk section */
+section {
+  padding: 50px 20px;
+}
+
+.navbar .nav-item .dropdown-menu {
+    display: block;
+    border: none;
+    margin-top: 0;
+    top: 150%;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    top: 100%;
+    visibility: visible;
+    transition: .5s;
+    opacity: 1;
+}
+}
+
+.header-container {
+  position: relative;
+  background-color: #29ab87;
+  background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
+  color: white;
+  padding: 100px 0;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.sub-header {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 50px 20px;
+  }
+
+  .sub-header {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .display-3 {
+    font-size: 2rem;
+  }
+
+  .sub-header {
+    font-size: 0.9rem;
+  }
+}
+/* Form Styling */
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form .form-label {
+  font-weight: bold;
+}
+
+form .form-control {
+  border: 1px solid #ced4da;
+  padding: 12px 15px;
+  border-radius: 6px;
+}
+
+form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn-form {
+  background-color: #29ab87 ;
+  color: #fff;
+  padding: 10px 20px;
+  border: none ;
+  border-radius: 6px;
+  width: 100% ;
+  transition: all 0.3s ease;
+}
+
+.btn-form:hover:hover {
+  background-color: aqua ;
+}
+
+/* Map Styling */
+.map-container {
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+  width: 100%;
+  height: 100vh;
+  border: 0;
+}
+
+/* FAQ Accordion */
+.accordion-button {
+  font-weight: bold;
+  background-color: aqua;
+  color: #495057;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #29ab87 !important;
+  color: #ffffff;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: none;
+}
+
+.accordion-body {
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item {
+  border: none;
+  margin-bottom: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .row.align-items-stretch > div {
+    margin-bottom: 20px;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .map-container {
+    height: auto;
+  }
+}
