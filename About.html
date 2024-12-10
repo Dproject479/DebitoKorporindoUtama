@@ -143,40 +143,7 @@
     </div>
   </div>
   
-
-<div class="container">
-  <div class="row content-section">
-    <!-- Left Section -->
-    <div class="col-lg-6" data-aos="fade-right">
-      <h1 class="mb-3 display-5" style="font-weight: bold ; color: #29ab87;">PT Debito Korporindo Utama</h1>
-      <h4 class="mb-3 sub-header-dt"> Tentang perusahaan </h4>
-      <p class="mb-4 description">
-        Sejak berdiri pada tahun 2019, PT Debito Korporindo Utama telah memainkan peran aktif sebagai penyedia jasa penagihan profesional, 
-        terutama dalam bidang *collection* untuk perusahaan financial teknologi. Berkantor pusat di Sleman, Donoharjo, 
-        dan dengan cabang di Ngampilan, Debito terus memperluas kehadirannya. 
-      </p>
-      <p class="mb-4 description">
-        Dengan lebih dari <strong>300 karyawan aktif yang berpengalaman dan profesional</strong>, 
-        Debito dipimpin oleh tim manajemen yang kompeten dan direktur yang visioner. 
-        Kolaborasi ini membuat Debito menjadi mitra pilihan utama bagi banyak perusahaan finansial.
-      </p>
-      <p class="mb-4 description">
-        Hingga saat ini, Debito telah berhasil menekan lebih dari <strong>4 miliar NPL</strong> (Non-Performing Loans) dan terus bertambah. 
-        Dengan slogan <em>"Menjadi vendor penagihan terpercaya dan dapat diandalkan di seluruh dunia finansial teknologi"</em>, 
-        Debito berkomitmen memberikan solusi terbaik yang profesional dan berintegritas.
-      </p>
-    </div>
-    <!-- Right Section -->
-    <div class="col-lg-6 image-container" data-aos="fade-left">
-      <div class="mb-4">
-        <img src="/asset/Image/Header-img1.jpg" alt="Kantor Debito">
-      </div>
-      <div>
-        <img src="/asset/Image/Team-1.jpg" alt="Tim Profesional Debito">
-      </div>
-    </div>
-  </div>
-</div>
+  
 <section style="background-image: url(https://img.freepik.com/free-vector/black-white-world-map-halftone-pattern-texture-background_84443-22487.jpg); background-repeat: repeat;"
 <div class="container mt-5">
   <div class="main-timeline">
@@ -367,7 +334,7 @@
 
       // Format angka
       if (isBillion) {
-        element.textContent = "+4 B"; // Format khusus untuk miliaran
+        element.textContent = "+450B"; // Format khusus untuk miliaran
       } else {
         element.textContent = `+${Math.floor(current).toLocaleString()}`;
       }
@@ -381,20 +348,35 @@
   }, stepTime);
 }
 
-// Jalankan counter ketika halaman dimuat
+// Fungsi untuk mendeteksi apakah elemen sudah masuk viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.top >= 0 && rect.bottom <= window.innerHeight;
+}
+
+// Inisialisasi ketika halaman dimuat
 window.addEventListener("load", () => {
   const counters = [
     { id: "counter1", endValue: 16, duration: 2000 },
     { id: "counter2", endValue: 20000, duration: 2000 },
     { id: "counter3", endValue: 200, duration: 2000 },
-    { id: "counter4", endValue: 4000000000, duration: 3000, isBillion: true }
+    { id: "counter4", endValue: 450000000000, duration: 3000, isBillion: true }
   ];
 
-  counters.forEach(({ id, endValue, duration, isBillion }) => {
-    const element = document.getElementById(id);
-    startCounter(element, 0, endValue, duration, isBillion);
+  const counterElements = counters.map(({ id }) => document.getElementById(id));
+
+  // Event listener untuk scroll
+  window.addEventListener("scroll", () => {
+    counterElements.forEach((element, index) => {
+      if (isInViewport(element) && !element.classList.contains('counted')) {
+        const { id, endValue, duration, isBillion } = counters[index];
+        startCounter(element, 0, endValue, duration, isBillion);
+        element.classList.add('counted'); // Menambahkan class agar tidak dihitung lagi
+      }
+    });
   });
 });
+
 
 
   </script>
