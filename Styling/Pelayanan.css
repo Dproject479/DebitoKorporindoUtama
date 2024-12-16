@@ -319,3 +319,81 @@ h4 {
     font-size: 1.25rem;
     color: black;
 }
+
+/* Custom Card CSS */
+.custom-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.crd-head {
+   color: whitesmoke ;
+   font-weight: bold;
+   background-color: aqua;
+   border-radius: 20px;
+   width: 50%;
+
+}
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.custom-card:hover .custom-card-img {
+  transform: scale(1.1);
+}
+
+.custom-card-body {
+  padding: 20px;
+  height: 200px;
+}
+
+.custom-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.custom-card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .custom-card {
+    margin-bottom: 20px;
+  }
+
+  .custom-card-img {
+    height: 150px;
+  }
+}
+
+/* CSS untuk menampilkan gambar di tengah */
+.image-center {
+  display: flex; /* Flexbox untuk pengaturan layout */
+  justify-content: center; /* Posisi horizontal di tengah */
+  align-items: center; /* Posisi vertikal di tengah */
+  min-height: 100vh; /* Tinggi layar penuh */
+  background-color: #f8f9fa; /* Warna latar belakang (opsional) */
+}
+
+.image-center img {
+  max-width: 90%; /* Gambar tidak melewati lebar layar */
+  max-height: 90%; /* Gambar tidak melewati tinggi layar */
+  border: 5px solid #ddd; /* Bingkai gambar */
+  border-radius: 10px; /* Sudut bingkai melengkung */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
