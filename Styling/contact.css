@@ -321,3 +321,41 @@ iframe {
     height: auto;
   }
 }
+
+.faq-heading {
+  background-color: #29ab87;
+  color: white;
+  width: 40%;
+  border-radius: 20px;
+}
+
+.faq-text {
+  color: aqua ;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.faq-item {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: aqua ;
+  width: 100%;
+}
+
+.faq-item:hover {
+  background-color: white;
+}
+
+.faq-answer {
+  display: none;
+}
+
+.faq-toggle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.faq-toggle.open {
+  transform: rotate(45deg);
+}

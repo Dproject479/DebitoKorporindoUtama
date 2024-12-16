@@ -422,8 +422,8 @@ header p {
 
 /* Responsive text and spacing */
 .facts-text h1 {
-  font-size: 50px ;
-  font-weight: bold;
+  font-size: 60px ;
+  font-weight: ;
 }
 
 .facts-text p {
@@ -432,7 +432,7 @@ header p {
 }
 
 .btn-secondary {
-  background-color: #0066cc;
+  background-color: #29ab87 !important;
   color: white;
   border: none;
 }
