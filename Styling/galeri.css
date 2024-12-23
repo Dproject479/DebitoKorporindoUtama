@@ -1,25 +1,79 @@
-
-body {
-  font-family: 'Poppins', sans-serif;
-  padding-top: 130px;
+body { 
+  font-family: 'Poppins', sans-serif; 
 }
 
+#scrollToTop { 
+  background-color: #29ab87; 
+  color: white; 
+  border: none; 
+  width: 50px; 
+  height: 50px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+} 
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+#scrollToTop:hover { 
+  background-color: #0056b3; 
 }
 
-@keyframes blink {
-  50% { border-color: transparent; }
+/* Keyframes */
+@keyframes typing { 
+  from { width: 0; } 
+  to { width: 100%; } 
 }
 
-.fade-in-word {
-display: inline-block;
-transition: opacity 0.5s ease, transform 0.5s ease;
+@keyframes blink { 
+  50% { border-color: transparent; } 
 }
 
- /* Custom Style */
+/* Fade-in Word */
+.fade-in-word { 
+  display: inline-block; 
+  transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+/* Custom Style */
+.main-top-bar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1031; /* Higher than the navbar */
+  background-color: #29ab87 !important;
+  color: #fff;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.navbar-top {
+  display: flex !important; 
+  flex-direction: column !important;   
+  background-color: #29ab87 !important;
+}
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0d6efd; /* Change to primary color on hover */
+}
+
+@media (max-width: 767.98px) {
+  .main-top-bar{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px;
+    text-align: center;
+    background-color: #29ab87 !important;
+    color: #fff;
+    font-size: 10px;
+     
+
+  }
+}
 
 /* Brand logo in the navbar */
 .navbar .navbar-brand img {
@@ -34,7 +88,7 @@ margin-left: 100px;
 .navbar {
 background-color: rgba(0, 255, 255, 0.5); /* Slightly opaque white background */
 border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Light border for definition */
-padding-top: 10px;
+
 }
 
 /* Navbar nav styles */
@@ -106,6 +160,7 @@ transform: scale(1.05); /* Slightly enlarge the button */
     margin: auto;
 }
 
+
 .navbar .navbar-nav {
     margin-top: 20px;
     margin-bottom: 15px;
@@ -127,97 +182,53 @@ transform: scale(1.05); /* Slightly enlarge the button */
     position: static;     /* Adjust position for better visibility */
 }
 }
-
-/* Dropdown menu styles for screens larger than 992px */
-@media (min-width: 992px) {
-  /* Gaya dasar untuk section */
-section {
-  padding: 50px 20px;
-}
-
-.navbar .nav-item .dropdown-menu {
-    display: block;
-    border: none;
-    margin-top: 0;
-    top: 150%;
-    right: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: .5s;
-}
-
-.navbar .nav-item:hover .dropdown-menu {
-    top: 100%;
-    visibility: visible;
-    transition: .5s;
-    opacity: 1;
-}
-}
-
-/* General Styling for Header */
 .header-container {
   position: relative;
   background-color: #29ab87;
   background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  background-position: center;
-  height: 300px; /* Atur tinggi header sesuai kebutuhan */
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: white;
-  text-align: center;
+  padding: 100px 0;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
 .header-content {
-  z-index: 1; /* Pastikan konten terlihat di atas gambar */
-  font-size: 100px;
+  position: relative;
+  z-index: 2;
 }
 
-.header-content h1 {
-  margin-bottom: 1rem;
+.sub-header {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.header-content nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 15px; /* Jarak antar elemen nav */
-}
-
-.header-content nav ul li {
-  display: inline;
-}
-
-.header-content nav ul li a {
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.header-content nav ul li a:hover {
-  color: #ffcc00; /* Warna hover */
-}
-
-/* Responsiveness */
 @media (max-width: 768px) {
   .header-container {
-    height: 200px; /* Kurangi tinggi untuk perangkat kecil */
+    padding: 50px 20px;
   }
 
-  .header-content h1 {
-    font-size: 1.8rem;
+  .sub-header {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .display-3 {
+    font-size: 2.5rem;
   }
 
-  .header-content nav ul {
-    flex-direction: column; /* Navigasi vertikal pada perangkat kecil */
-    gap: 10px;
-  }
-
-  .header-content nav ul li a {
+  .sub-header {
     font-size: 0.9rem;
   }
 }

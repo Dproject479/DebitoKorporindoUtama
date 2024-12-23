@@ -1,7 +1,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  padding-top: 130px;
+  padding: 0px ;
 }
 
 
@@ -19,7 +19,46 @@ display: inline-block;
 transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
- /* Custom Style */
+.main-top-bar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1031; /* Higher than the navbar */
+  background-color: #29ab87 !important;
+  color: #fff;
+  font-size: 14px;
+  padding: 15px ;
+}
+
+.navbar-top {
+  display: flex !important; 
+  flex-direction: column !important;   
+  background-color: #29ab87 !important;
+}
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0d6efd; /* Change to primary color on hover */
+}
+
+@media (max-width: 767.98px) {
+  .main-top-bar{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px;
+    text-align: center;
+    background-color: #29ab87 !important;
+    color: #fff;
+    font-size: 10px;
+     
+
+  }
+}
 
 /* Brand logo in the navbar */
 .navbar .navbar-brand img {
@@ -34,7 +73,7 @@ margin-left: 100px;
 .navbar {
 background-color: rgba(0, 255, 255, 0.5); /* Slightly opaque white background */
 border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Light border for definition */
-padding-top: 10px;
+
 }
 
 /* Navbar nav styles */
@@ -106,6 +145,7 @@ transform: scale(1.05); /* Slightly enlarge the button */
     margin: auto;
 }
 
+
 .navbar .navbar-nav {
     margin-top: 20px;
     margin-bottom: 15px;
@@ -153,7 +193,6 @@ section {
     opacity: 1;
 }
 }
-
 .header-container {
   position: relative;
   background-color: #29ab87;
@@ -191,13 +230,13 @@ section {
   }
 
   .sub-header {
-    font-size: 1rem;
+    font-size: 2.5rem;
   }
 }
 
 @media (max-width: 576px) {
   .display-3 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .sub-header {
@@ -208,7 +247,8 @@ section {
 .info-job-seek {
   background-image: url( /asset/Image/Bg-footer.png );
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover ;
+
 }
 .card-job-seek {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -264,9 +304,17 @@ section {
       transform: scale(0.97);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+  .text-job {
+    text-align: end ;
+    color: black 
+  }
 }
 .txt-job-seek {
   font-weight: bold ;
-  font-size: 60px ;
+  font-size: 40px ;
   color: #29ab87 ;
+  padding :20px;
 }
+
+
+
