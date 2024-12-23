@@ -1,7 +1,6 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  padding-top: 130px;
 }
 
 
@@ -19,9 +18,7 @@ display: inline-block;
 transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
- /* Custom Style */
- .top-bar {
-  position: fixed;
+.main-top-bar {
   top: 0;
   left: 0;
   width: 100%;
@@ -29,6 +26,13 @@ transition: opacity 0.5s ease, transform 0.5s ease;
   background-color: #29ab87 !important;
   color: #fff;
   font-size: 14px;
+  padding: 15px;
+}
+
+.navbar-top {
+  display: flex !important; 
+  flex-direction: column !important;   
+  background-color: #29ab87 !important;
 }
 
 .social-icons a {
@@ -39,6 +43,20 @@ transition: opacity 0.5s ease, transform 0.5s ease;
 
 .social-icons a:hover {
   color: #0d6efd; /* Change to primary color on hover */
+}
+
+@media (max-width: 767.98px) {
+  .main-top-bar{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px;
+    text-align: center;
+    background-color: #29ab87 !important;
+    color: #fff;
+    font-size: 10px;
+     
+
+  }
 }
 
 /* Brand logo in the navbar */
@@ -54,7 +72,7 @@ margin-left: 100px;
 .navbar {
 background-color: rgba(0, 255, 255, 0.5); /* Slightly opaque white background */
 border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Light border for definition */
-padding-top: 50px;
+
 }
 
 /* Navbar nav styles */
@@ -125,6 +143,7 @@ transform: scale(1.05); /* Slightly enlarge the button */
     max-height: 200px;
     margin: auto;
 }
+
 
 .navbar .navbar-nav {
     margin-top: 20px;
@@ -216,7 +235,7 @@ section {
 
 @media (max-width: 576px) {
   .display-3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .sub-header {
@@ -450,6 +469,8 @@ header p {
   color: #29ab87;
 }
 
+
+
 /* Small screens */
 @media (max-width: 768px) {
   .facts-text h1 {
@@ -458,7 +479,7 @@ header p {
 
   .facts-counter h1 {
     font-size: 2.5rem;
-  }
+  } 
 }
 /* General button styling */
 .btn-secondary {

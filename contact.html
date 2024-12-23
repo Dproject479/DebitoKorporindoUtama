@@ -15,45 +15,49 @@
     <title>Kontak Kami</title>
 </head>
 <body>
-  <div class="top-bar bg-dark text-white py-2">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center">
-        <span class="me-3"><i class="fa fa-map-marker-alt"></i> Alamat:  Bakalan, Donoharjo, Kec. Ngaglik, Kabupaten Sleman, Daerah Istimewa Yogyakarta 53183 </span>
-        <span class="me-3"><i class="fa fa-phone-alt"></i> Telepon: +62 812-1354-0606</span>
-      </div>
-      <div class="social-icons">
-        <a href="https://instagram.com" class="text-white me-2"> Debitroops <i class="fab fa-instagram"></i></a>
-      </div>
+  <!-- Top Bar Start -->
+<div class="bg-dark text-white navbar-top">
+  <div class="container d-flex justify-content-between align-items-center main-top-bar">
+    <div class="d-flex align-items-center">
+      <span class="me-3"><i class="fa fa-map-marker-alt"></i> Alamat:  Bakalan, Donoharjo, Kec. Ngaglik, Kabupaten Sleman, Daerah Istimewa Yogyakarta 53183 </span>
+    </div>
+    <div class="d-flex align-items-center">
+      <span class="me-3"><i class="fa fa-phone-alt"></i> Telepon: +62 812-1354-0606</span>
+    </div>
+    <div class="social-icons">
+      <a href="https://instagram.com" class="text-white me-2"> Debitroops <i class="fab fa-instagram"></i></a>
     </div>
   </div>
-  <!-- Top Bar End -->
-  <!-- Navbar Start -->
-  <nav id="navbar" class="navbar navbar-expand-lg bg-white navbar-light fixed-top px-4 px-lg-5">
-    <a href="index.html" class="navbar-brand d-flex align-items-center">
-      <h1 class="m-0">
-        <img class="img-fluid me-3" src="asset/Image/Debito-Logo-transformed.png" alt="Logo">
-      </h1>
-    </a>
-    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav mx-auto bg-nav rounded pe-4 py-3 py-lg-0" style="background-color: whitesmoke;">
-        <a href="index.html" class="nav-item nav-link active">Beranda</a>
-        <a href="About.html" class="nav-item nav-link">Tentang Kami</a>
-        <a href="Pelayanan.html" class="nav-item nav-link">Pelayanan</a>
-        <div class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Lainya</a>
-          <div class="dropdown-menu bg-light border-0 m-0">
-            <a href="Pelayanan.html" class="dropdown-item">Info Karir</a>
-            <a href="galeri.html" class="dropdown-item">Galeri Aktivitas</a>
-          </div>
+</div>
+<!-- Top Bar End -->
+<!-- Navbar Start -->
+<nav id="navbar" class="bg-white navbar navbar-expand-lg px-4 px-lg-5">
+  <a href="index.html" class="navbar-brand d-flex align-items-center">
+    <h1 class="m-0">
+      <img class="img-fluid me-3" src="asset/Image/Debito-Logo-transformed.png" alt="Logo">
+    </h1>
+  </a>
+  <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav mx-auto bg-nav rounded pe-4 py-3 py-lg-0" style="background-color: whitesmoke;">
+      <a href="index.html" class="nav-item nav-link active">Beranda</a>
+      <a href="About.html" class="nav-item nav-link">Tentang Kami</a>
+      <a href="Pelayanan.html" class="nav-item nav-link">Pelayanan</a>
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Lainya</a>
+        <div class="dropdown-menu bg-light border-0 m-0">
+          <a href="Job.html" class="dropdown-item">Info Karir</a>
+          <a href="galeri.html" class="dropdown-item">Galeri Aktivitas</a>
         </div>
-        <a href="contact.html" class="nav-item nav-link">Kontak Kami</a>
       </div>
+      <a href="contact.html" class="nav-item nav-link">Kontak Kami</a>
     </div>
-    <a href="https://wa.me/6281213540606" class="btn btn-primary px-3 d-none d-lg-block">Hubungi Kami</a>
-  </nav>
+  </div>
+  <a href="https://wa.me/6281213540606" class="btn btn-primary px-3 d-none d-lg-block">Hubungi Kami</a>
+</nav>
+<!-- Navbar End -->
   <header class="header-container">
     <div class="header-overlay"></div>
     <div class="header-content container text-center">
@@ -63,126 +67,191 @@
       </p>
     </div>
   </header>
-  <section class="py-5">
-    <div class="container">
-      <div class="row align-items-stretch">
-        <!-- Left Side: Form -->
-        <div class="col-lg-6 mb-4" data-aos="fade-up">
-          <h2 class="fw-bold mb-3 display-5" style="color: #29ab87;">Hubungi Kami untuk pertanyaan terkait.</h2>
-          <p>Dapatkan jawaban terbaik, jangan ragu hubungi kami dengan form pesan di bawah ini. Kami siap selalu membantu Anda.</p>
-          <form id="contactForm">
-            <div class="mb-3">
-              <label for="name" class="form-label">Nama Anda</label>
-              <input type="text" class="form-control" id="name" name="user_name" placeholder="Masukkan nama Anda" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email Anda</label>
-              <input type="email" class="form-control" id="email" name="user_email" placeholder="Masukkan email Anda" required>
-            </div>
-            <div class="mb-3">
-              <label for="subject" class="form-label">Subjek</label>
-              <input type="text" class="form-control" id="subject" name="user_subject" placeholder="Subjek pesan Anda" required>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Isi Pesan</label>
-              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Kirim</button>
-          </form>
-        </div>
-  
-        <!-- Right Side: Map -->
-        <div class="col-lg-6" data-aos="fade-up">
-          <div class="map-container">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.0!2d-122.0842494!3d37.4220657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zTMO6Y2FzaSBHcm91cCwgR29vZ2xlIExMQw!5e0!3m2!1sen!2sus!4v1696864294946!5m2!1sen!2sus"
-              allowfullscreen="" loading="lazy"></iframe>
-          </div>
-        </div>
-      </div>
+  <section class="sec-head" style="background-image: url(asset/Image/Bg-footer.png);">
+  <div class="container text-center mt-5" >
+    <!-- Logo Section -->
+    <div class="mb-4">
+        <img src="/asset/Image/Debito-Logo-transformed.png" style="width: 20%;" alt="Logo" class="img-fluid">
     </div>
+
+    <!-- Heading Section -->
+    <h1 class="mb-4 fw-bold" style="color: #29ab87 ;"> Gapai Kami Segera !  </h1>
+
+    <!-- Address Section -->
+    <div class="card mx-auto" style="max-width: 500px;">
+        <div class="card-body">
+            <h5 class="card-title"> kantor pusat (head office) </h5>
+            <p class="card-text">Alamat: Bakalan, Donoharjo, Kec. Ngaglik, Kabupaten Sleman, Daerah Istimewa Yogyakarta 53183</p>
+            <p class="card-text"> Telepon : 0812-1354-0606 </p>
+            <a class="card-text"> Email : Info@Debitokorp.com</a>
+            <br>
+            <br>
+            <!-- Google Map Button -->
+            <a href="https://www.google.com/maps" target="_blank" class="btn btn-primary" style="width: 100%; background-color: #29ab87 !important;">Find Us on Map</a>
+        </div>
+    </div>
+</div>
   </section>
-  <!-- Modal Pesan Terkirim -->
-<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header bg-success text-white">
-        <h5 class="modal-title" id="successModalLabel">Pesan Terkirim</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<section class="section-form mt-5" style="background-color: whitesmoke;">
+<div class="container mt-5" >
+    <div class="contact-section mx-auto" style="max-width: 700px;">
+        <div class="text-center mb-4">
+          <p> Ada pertanyaan ? </p>
+            <h2 class="fw-bold" style="color: #29ab87;"> Apa kamu ada pertanyaan lebih lanjut ? jangan ragu hubungi kami melalui kontak ini. </h2>     
+        </div>
+
+        <form id="contactForm">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label for="name" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="name" name="user_name" placeholder="Nama Anda" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="user_email" placeholder="Email Anda" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="subject" class="form-label">Subjek</label>
+                    <input type="text" class="form-control" id="subject" name="user_subject" placeholder="Subjek" required>
+                </div>
+            </div>
+            <div class="mt-3">
+                <label for="message" class="form-label">Isi Pesan</label>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+            </div>
+        </form>
+    </div>
+    </div>
+</section>
+<!-- FAQ Section -->
+<div class="container space-2 space-3--lg mt-5">
+  <div class="row justify-content-lg-between">
+    <div class="col-lg-4 mb-7 mb-lg-0">
+      <!-- Image Box -->
+      <div class=" d-flex justify-content-center align-items-center img-faq">
+        <img src="https://img.freepik.com/free-photo/hesitant-asian-woman-spreads-palms-looks-with-clueless-expression-dressed-orange-jacket-uses-smartphone-listens-music-from-playlist-via-wireless-headphones-isolated-blue_273609-49598.jpg" alt="FAQ Image" class="img-fluid rounded">
       </div>
-      <div class="modal-body">
-        <p>Terima kasih! Pesan Anda telah berhasil dikirim. Kami akan segera menghubungi Anda.</p>
+      <!-- End Image Box -->
+    </div>
+
+    <div class="col-lg-7">
+      <!-- Title -->
+      <div class="mb-4">
+        <h2 class="display-3 text-info">Frequently Asked Questions</h2>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Tutup</button>
+      <!-- End Title -->
+
+      <!-- Accordion -->
+      <div class="mb-5" id="basicsAccordion">
+        <div class="card card-collapse mb-3">
+          <div class="card-header card-collapse__header" id="basicsHeadingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#basicsCollapseOne"
+                      aria-expanded="false"
+                      aria-controls="basicsCollapseOne">
+                Apa saja layanan yang disediakan oleh PT Debito Korporindo Utama?
+
+                <span class="card-collapse__btn-arrow">
+                  <span class="fa fa-arrow-down card-collapse__btn-arrow-inner"></span>
+                </span>
+              </button>
+            </h5>
+          </div>
+          <div id="basicsCollapseOne" class="collapse"
+               aria-labelledby="basicsHeadingOne"
+               data-bs-parent="#basicsAccordion">
+            <div class="card-body card-collapse__body">
+              PT Debito Korporindo Utama menyediakan layanan penagihan profesional yang memenuhi standar industri, serta layanan telemarketing yang terstruktur dan ramah. Kami juga memiliki sertifikasi dari AFPI.
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-collapse mb-3">
+          <div class="card-header card-collapse__header" id="basicsHeadingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#basicsCollapseTwo"
+                      aria-expanded="false"
+                      aria-controls="basicsCollapseTwo">
+                Bagaimana cara menghubungi PT Debito Korporindo Utama?
+
+                <span class="card-collapse__btn-arrow">
+                  <span class="fa fa-arrow-down card-collapse__btn-arrow-inner"></span>
+                </span>
+              </button>
+            </h5>
+          </div>
+          <div id="basicsCollapseTwo" class="collapse"
+               aria-labelledby="basicsHeadingTwo"
+               data-bs-parent="#basicsAccordion">
+            <div class="card-body card-collapse__body">
+              Anda dapat menghubungi kami melalui telepon di +62 812-1354-0606 atau melalui email di info@debito.co.id. Kami juga tersedia di media sosial seperti Instagram dengan nama pengguna Debitroops.
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-collapse mb-3">
+          <div class="card-header card-collapse__header" id="basicsHeadingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link btn-block d-flex justify-content-between card-collapse__btn collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#basicsCollapseThree"
+                      aria-expanded="false"
+                      aria-controls="basicsCollapseThree">
+                Berapa komisi yang dikenakan untuk layanan penagihan?
+
+                <span class="card-collapse__btn-arrow">
+                  <span class="fa fa-arrow-down card-collapse__btn-arrow-inner"></span>
+                </span>
+              </button>
+            </h5>
+          </div>
+          <div id="basicsCollapseThree" class="collapse"
+               aria-labelledby="basicsHeadingThree"
+               data-bs-parent="#basicsAccordion">
+            <div class="card-body card-collapse__body">
+              Komisi yang dikenakan untuk layanan penagihan bervariasi tergantung pada jenis layanan dan volume penagihan. Untuk informasi lebih lanjut, silakan hubungi tim kami untuk mendapatkan penawaran yang sesuai dengan kebutuhan Anda.
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- End Accordion -->
     </div>
   </div>
 </div>
-<div class="container my-5">
-  <!-- Heading -->
-  <div class="text-center">
-      <h1 class="faq-heading" data-aos="fade-up">FAQ | Frequently Asked Questions</h1>
-      <img src="https://img.freepik.com/free-vector/tiny-people-sitting-standing-near-giant-faq_74855-7879.jpg" class="img-fluid">
-      <h2 class="display-2 my-4 faq-text" data-aos="fade-up" data-aos-delay="200">You Ask, We Answer</h2>
-  </div>
-
-  <!-- FAQ Section -->
-  <div class="row">
-      <div class="col-12">
-          <div class="faq-item card shadow-sm p-3 mb-3" data-aos="fade" data-aos-delay="300" onclick="toggleAnswer(1)">
-              <div class="card-body d-flex justify-content-between align-items-center">
-                  <h5 class="card-title mb-0">Apa itu PT Debito Korporindo Utama?</h5>
-                  <span class="faq-toggle" id="toggle-1">+</span>
-              </div>
-              <div class="faq-answer" id="answer-1">
-                  <p class="card-text">PT Debito Korporindo Utama adalah perusahaan penyedia layanan penagihan profesional yang terstandarisasi dan berpengalaman dalam menangani NPL.</p>
-              </div>
-          </div>
-
-          <div class="faq-item card shadow-sm p-3 mb-3" data-aos="fade" data-aos-delay="400" onclick="toggleAnswer(2)">
-              <div class="card-body d-flex justify-content-between align-items-center">
-                  <h5 class="card-title mb-0">Bagaimana cara PT Debito Korporindo Utama membantu mengurangi NPL?</h5>
-                  <span class="faq-toggle" id="toggle-2">+</span>
-              </div>
-              <div class="faq-answer" id="answer-2">
-                  <p class="card-text">Kami bekerja sama dengan perusahaan fintech untuk memberikan solusi penagihan yang efektif dan sesuai standar industri, mengurangi NPL dan meningkatkan arus kas.</p>
-              </div>
-          </div>
-
-          <div class="faq-item card shadow-sm p-3 mb-3" data-aos="fade" data-aos-delay="500" onclick="toggleAnswer(3)">
-              <div class="card-body d-flex justify-content-between align-items-center">
-                  <h5 class="card-title mb-0">Apakah PT Debito Korporindo Utama memiliki sertifikasi atau standar tertentu?</h5>
-                  <span class="faq-toggle" id="toggle-3">+</span>
-              </div>
-              <div class="faq-answer" id="answer-3">
-                  <p class="card-text">Ya, kami memiliki sertifikasi dan mematuhi standar industri untuk memastikan layanan penagihan yang etis dan sesuai hukum yang berlaku.</p>
-              </div>
-          </div>
-
-          <div class="faq-item card shadow-sm p-3 mb-3" data-aos="fade" data-aos-delay="600" onclick="toggleAnswer(4)">
-              <div class="card-body d-flex justify-content-between align-items-center">
-                  <h5 class="card-title mb-0">Apa manfaat menggunakan layanan PT Debito Korporindo Utama bagi perusahaan?</h5>
-                  <span class="faq-toggle" id="toggle-4">+</span>
-              </div>
-              <div class="faq-answer" id="answer-4">
-                  <p class="card-text">Layanan kami membantu perusahaan meminimalkan kerugian akibat NPL, mempercepat pemulihan utang, dan menjaga reputasi perusahaan dengan pendekatan penagihan yang profesional.</p>
-              </div>
-          </div>
-
-          <div class="faq-item card shadow-sm p-3 mb-3" data-aos="fade" data-aos-delay="700" onclick="toggleAnswer(5)">
-              <div class="card-body d-flex justify-content-between align-items-center">
-                  <h5 class="card-title mb-0">Bagaimana proses penagihan dilakukan oleh PT Debito Korporindo Utama?</h5>
-                  <span class="faq-toggle" id="toggle-5">+</span>
-              </div>
-              <div class="faq-answer" id="answer-5">
-                  <p class="card-text">Proses penagihan dilakukan dengan pendekatan yang bersifat persuasif dan mengutamakan komunikasi yang jelas, serta mematuhi semua regulasi yang ada.</p>
-              </div>
-          </div>
-      </div>
-  </div>
+<!-- End FAQ Section -->
+    <!-- Map Section -->
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.0!2d-122.0842494!3d37.4220657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zTMO6Y2FzaSBHcm91cCwgR29vZ2xlIExMQw!5e0!3m2!1sen!2sus!4v1696864294946!5m2!1sen!2sus"
+            allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
 </div>
-  
+
+<!-- Modal Pesan Terkirim -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="successModalLabel">Pesan Terkirim</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Terima kasih! Pesan Anda telah berhasil dikirim. Kami akan segera menghubungi Anda.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <footer class="bg-light py-4" style="background-image: url(/asset/Image/Bg-footer.png); background-size: cover; background-position: center;">
   <div class="container text-center">
@@ -261,4 +330,3 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   </script>
 </body>
 </html>
-

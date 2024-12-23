@@ -645,7 +645,7 @@ section {
 
 /* Reason Section Start */
 .reason-sct {
-  background-image: url(/asset/Image/Bg-footer.png);
+  background-color: whitesmoke;
   background-repeat: no-repeat;
   background-size: cover;
 }
