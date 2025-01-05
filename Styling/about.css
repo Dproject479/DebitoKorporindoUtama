@@ -12,6 +12,21 @@ body {
 @keyframes blink {
   50% { border-color: transparent; }
 }
+#scrollToTop { 
+  background-color: #29ab87; 
+  color: white; 
+  border: none; 
+  width: 50px; 
+  height: 50px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+} 
+
+#scrollToTop:hover { 
+  background-color: #0056b3; 
+}
 
 .fade-in-word {
 display: inline-block;
@@ -442,7 +457,7 @@ header p {
 /* Responsive text and spacing */
 .facts-text h1 {
   font-size: 60px ;
-  font-weight: ;
+  
 }
 
 .facts-text p {

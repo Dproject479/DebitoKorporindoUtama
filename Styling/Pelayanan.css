@@ -239,13 +239,32 @@ transform: scale(1.05); /* Slightly enlarge the button */
   font-size: 60px;
 }
 
+@media (max-width: 768px) {
+  .text-service {
+    font-size: 30px;
+  }
+}
+
 .text-service-info {
   font-size: 1rem;
   color: #29ab87;
+}
+
+@media (max-width: 768px) {
+  .text-service-info {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
 }
 
 .text-feature {
   font-weight: bold;
   font-size: 50px;
   color: #29ab87;
+}
+
+@max-width (768px) {
+  .text-feature {
+    font-size: 20px;
+  }
 }

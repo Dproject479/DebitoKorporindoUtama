@@ -232,3 +232,25 @@ transform: scale(1.05); /* Slightly enlarge the button */
     font-size: 0.9rem;
   }
 }
+
+.logo-container img {
+  max-width: 150px;
+}
+/* Style for Quotes Section */
+.quotes {
+  font-size: 30px; /* Larger font size */
+  font-family: Poppins , sans-serif ;
+  margin: 60px;
+  font-style: italic;
+  color: #29ab87
+  
+}
+
+@media (max-width: 767.98px) {
+  .quotes {
+    font-size: 20px; /* Smaller font size for mobile */
+    margin: 30px;
+  }
+}
+
+
